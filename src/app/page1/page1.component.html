@@ -1,0 +1,27 @@
+<mat-spinner *ngIf="!pokemons"></mat-spinner>
+<div>
+
+  <div>
+    <td>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="User Name" value="Name" (keyup)="addname($event)"></mat-form-field>
+    </td>
+      <td>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="User Email" value="Email"(keyup)="addEmail($event)">
+        </mat-form-field>
+    </td>
+      </div>
+      <button mat-flat-button color="primary"label="Click"(click)="kirimdata()">Add user</button>
+      
+</div>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <tr *ngFor="let pokemon of pokemons" [routerLink]="['/page2', pokemon.id]">
+    <td>{{pokemon.name}}</td>
+    <td>{{pokemon.email}}</td>
+  </tr>
+</table>

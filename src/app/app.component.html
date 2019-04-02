@@ -1,0 +1,21 @@
+<!-- <div>
+  <a [routerLink]="['/page1']">Page1</a>
+</div>
+<div>
+  <a [routerLink]="['/page2']">Page2</a>
+</div> -->
+
+<mat-toolbar color="accent" class="toolbar">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/page1']">Pokemon List</button>
+  </mat-menu>
+
+  Pokedex
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<!-- 
+<div>
+  This is footer
+</div> -->

@@ -1,0 +1,18 @@
+<mat-spinner *ngIf="!pokemon"></mat-spinner>
+
+<mat-card class="student-card" *ngIf="pokemon">
+  <mat-card-header>
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+   
+    <mat-card-subtitle>-----</mat-card-subtitle>
+  </mat-card-header>
+  <div>
+    Email : {{pokemon.email}}
+    Address : {{pokemon.address.suite}}, {{pokemon.address.street}}, {{pokemon.address.city}}
+      
+  </div>
+      Phone : {{pokemon.phone}}
+      <td>Address : {{pokemon.address.suite}}, {{pokemon.address.street}}, {{pokemon.address.city}}
+      </td>
+     
+</mat-card>
